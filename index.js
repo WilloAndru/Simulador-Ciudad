@@ -21,7 +21,7 @@ var rocaActual = 20;
 
 var intervalos = new Set();
 
-var duracionDia = 1000;
+var duracionDia = 10000;
 
 var mouseX;
 var mouseY;
