@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+h1 {font-size: 56px;}
+h5 {font-size: 21px;}
+
+button:hover {cursor: pointer;}
+button:focus {outline: none;}
+
+.noNegrilla {font-weight: normal;}
+
+/*-----------------------------------------------------------------------------------VENTANA-------------------------------------------------------------------------------------*/
+
+header {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 18vw;
+    background-color: #363636;
+}
+
+header img {
+    margin-right: 6px;
+    width: 30px;
+}
+
+#fecha {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {margin-bottom: 50px;}
+
+.headerDiv {
+    display: flex;
+    background-color: #565656;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 180px;
+    gap: 4px;
+    border: 1px black solid;
+}
+
+#porcentajeLaboral {
+    width: 180px;
+    padding: 0;
+    gap: 0;
+}
+
+#porcentajeLaboral div {
+    display: flex;
+    gap: 4px;
+    padding: 5px 10px;
+    width: 49%;
+}
+
+#porcentajeLaboral2 {border-left: 1px solid black;}
+
+#botonGuia {
+    border: 1px solid black;
+    Border-radius: 25px;
+    padding: 5px 15px;
+    background-color: #565656;
+    position: relative;
+    top: 5vw;
+}
+#botonGuia:hover {background-color: #363636;}
+
+main {
+    transition: transform 0.3s ease-in-out;
+    cursor: zoom-in;
+    background-color: #005693;
+    width: 85vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+.zoomed {transform: scale(2.5);}
+
+table {
+    border-collapse: collapse;
+    border: black 1px solid;
+}
+
+td {
+    background-color: rgb(112, 177, 0);
+    width: 7px;
+    height: 7px;
+}
+
+#interfazGuia {
+    display: none;
+    background-color: #363636;
+    position: absolute;
+    left: 19vw;
+    top: 2vh;
+    width: 80vw;
+    height: 96vh;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+/*--------------------------------------------------------------------------INTERFAZ INFO Y EDIT--------------------------------------------------------------------------------*/
+
+#interfazPequeña {
+    transition: background-color 0.5s ease;
+    display: none;
+    padding: 12px;
+    font-size: 14px;
+    width: 180px;
+    border-radius: 10px;
+    position: absolute;
+    border: black solid 1px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#interfazPequeña div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#interfazPequeña img {width: 8px;}
+
+#botonCerrarInterfazPequeña {
+    display: none;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+    background-color: #9f0000;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px;
+}
+#botonCerrarInterfazPequeña:hover {border: 1px solid white;}
+
+#botonRemoverObjeto {
+    display: none;
+    border: 1px solid black;
+    background-color: #9f0000;
+    padding: 4px;
+    border-radius: 5px;
+}
+#botonRemoverObjeto:hover {border: 1px solid white;}
+
+#animacionDinero {
+    position: absolute;
+    -webkit-text-stroke: 1px black;
+    cursor: default;
+}
+
+#animacionDibujo {
+    gap: 5px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+#animacionDibujoP {-webkit-text-stroke: 1px black;}
+
+#animacionDibujoImg {width: 25px;}
+
+/*--------------------------------------------------------------------------INTERFAZ TIENDA----------------------------------------------------------------------------------*/
+
+#interfazTienda {
+    display: none;
+    position: absolute;
+    left: 19vw;
+    top: 2vh;
+    width: 80vw;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+#interfazTiendaPestañas {
+    display: flex;
+    width: 100%;
+}
+
+#interfazTiendaPestañas button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    flex-grow: 1;
+    background-color: #565656;
+    border: none;
+}
+#interfazTiendaPestañas button:focus {
+    background-color: #363636;
+}
+
+#interfazTiendaPestañas img {width: 28px;}
+
+#interfazTiendaObjetos {
+    background-color: #363636;
+    height: 88vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 30px;
+}
+
+#interfazTiendaObjeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    line-height: 1.5;
+    border-radius: 15px;
+    border: black 2px solid;
+    width: 20%;
+    height: 50%;
+    transition: transform 0.3s ease;
+}
+#interfazTiendaObjeto:hover {transform: scale(1.05);}
+
+#interfazTiendaObjetoTexto img {
+    width: 20px;
+    margin-bottom: -5px;
+}
+
+#imagenCursor {
+    position: absolute;
+}
+
+
+
+
